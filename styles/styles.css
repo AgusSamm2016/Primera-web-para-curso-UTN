@@ -1,0 +1,335 @@
+* {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+/* Header */
+.header-container {
+   display: flex;
+   width: 100%;
+   height: 12vh;
+   margin-bottom: 1rem;
+   background-color: black;
+   color: white;
+   align-items: center;
+   justify-content: space-between;
+   overflow: hidden;
+}
+.header-isologo {
+    display: flex;
+    font-size: 1rem;
+    font-style: italic;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 .5rem;
+    width: 30%;
+}
+.header-isologo h1 {
+  font-family:'Raleway', sans-serif;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    padding: .5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(250, 250, 250);
+    padding: .5rem;
+}
+nav ul li a:hover {
+    background-color: rgb(107, 67, 73);
+    color: white;
+    border-radius: 5px;
+} 
+/* --------------------------------- */
+/* Main part */
+.mainbook-container {
+    height: 65vh;
+    display: flex;
+    margin: .5rem .5rem 0 .5rem;
+    width: 99%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    overflow: hidden;
+}
+.mainbook-container .image-main {
+    width: 99%;
+    height: 99%;
+    padding: .5rem .5rem;
+}
+.mainbook-container .image-main:hover {
+filter: grayscale(70%);
+}
+
+/* Section-description*/
+.top-container {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  gap: 1em;
+}
+
+.bottom-container {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+.top-container .right-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.top-container .right-container p {
+  text-align: justify;
+}
+.top-container .right-container h2 {
+  justify-content: center;
+  align-self: center;
+  color: rgb(224, 14, 14);
+  text-decoration: underline;
+}
+.bottom-container .right-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: justify;
+}
+.bottom-container .right-container2 p {
+  text-align: justify;
+}
+.bottom-container .right-container2 h2 {
+  justify-content: flex-start;
+  align-self: center;
+  color: rgb(224, 14, 14);  
+  text-decoration: underline;
+}
+
+/* SECTION OF CARDS */
+.card-container {
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    width: 99%;
+    margin: 0 .5rem .5rem .5rem;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 16px;
+    overflow: hidden;
+    transform: translate(0);
+    margin: 1rem;
+    transition: 0.25s;
+}
+.card:hover {
+    transform: scale(1.03);
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: -64px;
+    left: -64px;
+    width: 150%;
+    height: 76%;
+    transform: rotate(-12deg);
+    z-index: -1;
+  }
+
+  .card.card-yellow::before {
+    background: linear-gradient(170deg, #d97904, #f2b705);
+  }
+  .card.card-blue::before {
+    background: linear-gradient(170deg, #235b8c, #03a696);
+  }
+  .card.card-red::before {
+    background: linear-gradient(170deg, #d9042b, #f13a5c);
+  }
+  .card .logo {
+    height: 24px;
+    padding: 8px;
+  }
+  .card h2 {
+    font-family: "Myriad Bold Italic";
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 64px;
+    color: #ffffff;
+    margin: 0;
+    margin-top: 24px;
+  }
+  .card .product {
+    height: 220px;
+    width: 300px;
+    object-fit: contain;
+    transform: rotate(-35deg);
+    margin-top: -42px;
+    margin-left: -32px;
+    margin-right: 24px;
+  }
+  .card .price {
+    text-align: right;
+    margin-top: -24px;
+  }
+  .card .price :is(h6, h4) {
+    font-family: "Myriad Bold";
+    color: #ffffff;
+    margin: 0;
+  }
+  .card .price h6 {
+    color: #a3a3a3;
+    font-size: 12px;
+    text-decoration: line-through;
+  }
+  .card .price h4 {
+    font-size: 24px;
+    margin-top: -4px;
+  }
+  .card.card-yellow .price h4 {
+    background: linear-gradient(170deg, #d97904, #f2b705);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .card.card-blue .price h4 {
+    background: linear-gradient(170deg, #235b8c, #03a696);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .card.card-red .price h4 {
+    background: linear-gradient(170deg, #d9042b, #f13a5c);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+
+/* Formularios */
+.formulario{
+    display:flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 30px 30px 60px 30px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center; 
+  }
+  .formulario1 {
+    display:flex;
+    flex-direction: column;
+    background: #fff;
+    margin: 50px 30px 101px 30px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center; 
+  }
+.contenedor{
+  width: fit-content;
+  padding: 15px;
+}
+
+ .formulario h1{
+  text-align: center;
+  align-self: center;
+  color: #b61111;
+  background-color: #a3a3a3;
+  font-size: 25px;
+  font-style: italic;
+  padding: 7px;
+}
+.formulario1 h1 {
+  text-align: center;
+  align-self: center;
+  color: #b61111;
+  background-color: #a3a3a3;
+  font-size: 25px;
+  font-style: italic;
+  padding: 7px;
+}
+input[type="text"],
+input[type="password"]{
+  font-size: 20px;
+  width: 82%;
+  padding: 10px;
+  border: none;
+}
+.input-contenedor{
+  margin-bottom: 15px;
+  border: 1px solid #aaa;
+}
+.icon{
+  min-width: 50px;
+  text-align: center;
+  color: #999;
+}
+.button{
+  border: none;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  background: #b61111;
+  padding: 15px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.button:hover{
+  background: rgb(194, 36, 36);
+}
+p{
+  text-align: center;
+}
+.link{
+  text-decoration: none;
+  color: #b61111;
+  font-weight: 600;
+}
+.link:hover{
+   color: cadetblue;
+}
+
+/* gallery */
+.img-gallery {
+  max-width: 100%;
+  border: 1px solid;
+}
+.img-gallery:hover {
+  transform: scale(1.03);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: .5em;
+  border: 1px solid;
+  margin: 10px 10px;
+  padding: 5px;
+}
+
+/* footer */
+.footer-container {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    height: 10vh;
+}
+
+
